@@ -47,16 +47,20 @@ const LogIn = () => {
                 <div className="mb-3">
                     <label   className="form-label">Email address</label>
                     <input type="email" ref={emailRef} className="form-control"aria-describedby="emailHelp" required />
-                    <div id="emailHelp" className="form-text">We'll never share your email with anyone else.</div>
+                    <div id="emailHelp" className="form-text"></div>
                 </div>
                 <div className="mb-3">
                     <label   className="form-label">Password</label>
                     <input type="password" ref={passRef} className="form-control" required />
                 </div>
-                <button type="submit" className="btn btn-primary">Submit</button>
-
+                <button type="submit" className="btn btn-primary w-100">Submit</button>
             </form>
-            <button onClick={handleSignInWithGoogle} className='btn btn-success ms-5 mt-3 ms-auto'> Google signIn</button>
+                <div className='d-flex justify-content-center align-items-center'>
+                    <div style={{border: '1px solid blue', width:'200px'}}></div>
+                    <p style={{marginTop: '10px', padding:'10px'}}>OR</p>
+                    <div style={{border:'1px solid blue', width:'200px'}}></div>
+                </div>
+            <button onClick={handleSignInWithGoogle} className='btn btn-success w-100 mb-2'>Login with Google</button>
             <p>New User? <Link to='/register' className='text-danger text-decoration-none' onClick={navigateRegister}>please register</Link></p>
         </div>
     );

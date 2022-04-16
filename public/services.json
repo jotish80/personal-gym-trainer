@@ -1,0 +1,39 @@
+[
+  {
+    "id": "1",
+    "name": "Tom",
+    "price": 1000,
+    "img": "https://i.ibb.co/fMrsCZH/john-fornander-d-MWL8-V7-L8-G4-unsplash.jpg"
+  },
+  {
+    "id": "2",
+    "name": "Mark",
+    "price": 2000,
+    "img": "https://i.ibb.co/fxzGSs9/sushil-ghimire-e-Fx1-KZha-Svo-unsplash.jpg"
+  },
+  {
+    "id": "3",
+    "name": "Russel",
+    "price": 1050,
+    "img": "https://i.ibb.co/WKzWk1h/dollar-gill-Qo-W2-Sdlh9-Nk-unsplash.jpg"
+  },
+  {
+    "id": "4",
+    "name": "Natasha",
+    "price": 1200,
+    "img": "https://i.ibb.co/7CCkxgR/total-shape-Drq07-X98-Bq-M-unsplash-1.jpg"
+  },
+  {
+    "id": "5",
+    "name": "Robert",
+    "price": 1400,
+    "img": "https://i.ibb.co/ysFJJvm/larry-crayton-Th2-Pk8-NKp-Oc-unsplash.jpg"
+  },
+  {
+    "id": "6",
+    "name": "John",
+    "price": 1500,
+    "img": "https://i.ibb.co/qRS2KF3/anastase-maragos-i-Uzge-POo-Gko-unsplash.jpg"
+  }
+   
+]

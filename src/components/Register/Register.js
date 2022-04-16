@@ -41,7 +41,7 @@ const Register = () => {
                     <label  className="form-label">Password</label>
                     <input type="password" name='password'  className="form-control" id="exampleInputPassword1" required/>
                 </div>
-                <button type="submit" className="btn btn-primary">Register</button>
+                <button type="submit" className="btn btn-primary w-100 mb-2">Register</button>
             </form>
             <p>Already have an account? <Link to='/login' className='text-danger text-decoration-none' onClick={navigateLogin}>please Login</Link></p>
         </div>
