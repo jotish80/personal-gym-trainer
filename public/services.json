@@ -3,36 +3,42 @@
     "id": "1",
     "name": "Tom",
     "price": 1000,
-    "img": "https://i.ibb.co/fMrsCZH/john-fornander-d-MWL8-V7-L8-G4-unsplash.jpg"
+    "description":"A Fitness Trainer, or Fitness Instructor, provides fitness guidance to help clients improve their physical condition.",
+    "img": "https://i.ibb.co/cvXsj1N/dollar-gill-YTAK-7-BBEsc-unsplash.jpg"
   },
   {
     "id": "2",
-    "name": "Mark",
+    "name": "Natasha",
     "price": 2000,
+    "description": "You will assess the physical and health conditions of clients, create appropriate exercise plans, and monitor their improvement.",
     "img": "https://i.ibb.co/fxzGSs9/sushil-ghimire-e-Fx1-KZha-Svo-unsplash.jpg"
   },
   {
     "id": "3",
     "name": "Russel",
     "price": 1050,
-    "img": "https://i.ibb.co/WKzWk1h/dollar-gill-Qo-W2-Sdlh9-Nk-unsplash.jpg"
+    "description":"You will maximize the quality of life and movement potential within.Monitor their improvement.It is important to have a trainer.",
+    "img": "https://i.ibb.co/CMBdqJt/humphrey-muleba-JJAP7m5p-U3-M-unsplash.jpg"
   },
   {
     "id": "4",
-    "name": "Natasha",
+    "name": "Mark",
     "price": 1200,
-    "img": "https://i.ibb.co/7CCkxgR/total-shape-Drq07-X98-Bq-M-unsplash-1.jpg"
+    "description":"Evaluate clients’ fitness levels and health conditions.Explain exercises in detail and suggest alternatives if needed.Monitor progress of clients’ fitness levels.",
+    "img": "https://i.ibb.co/P1vfvp8/aaron-brogden-9y4-Ma-Tz2-Js0-unsplash-1.jpg"
   },
   {
     "id": "5",
-    "name": "Robert",
+    "name": "Ema",
     "price": 1400,
-    "img": "https://i.ibb.co/ysFJJvm/larry-crayton-Th2-Pk8-NKp-Oc-unsplash.jpg"
+    "description":"Explain safe and proper use of gym equipment.Lead both individual and group training sessions.Research on new exercise technique.",
+    "img": "https://i.ibb.co/GHDtSkL/spencer-davis-0-Sh-Ts8i-PY28-unsplash.jpg"
   },
   {
     "id": "6",
     "name": "John",
     "price": 1500,
+    "description":"Promote the gym’s fitness packages and plans.Perform CPR and administer first aid in case of emergencies.The awesome body building you should achieve.",
     "img": "https://i.ibb.co/qRS2KF3/anastase-maragos-i-Uzge-POo-Gko-unsplash.jpg"
   }
    

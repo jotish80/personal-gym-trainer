@@ -1,17 +1,27 @@
-import React, { useRef } from 'react';
+import React, {  useRef } from 'react';
 import './LogIn.css';
-import { useAuthState, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useAuthState, useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../Firebase/firebase.init';
 import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 const LogIn = () => {
     // const [user] =useAuthState(auth);
+     
     const emailRef = useRef('');
     const passRef = useRef('');
     const navigate = useNavigate()
     const [signInWithEmailAndPassword, user, loading, error,] = useSignInWithEmailAndPassword(auth);
+
+    let errorElement;
+    if(error){
+        errorElement = <div><p className='text-danger'>Error:{error?.message}</p></div>
+    }
+
+    const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
 
     const provider = new GoogleAuthProvider();
     const handleSignInWithGoogle = () => {
@@ -39,11 +49,22 @@ const LogIn = () => {
     const navigateRegister = (event) => {
         navigate('/register')
     }
+
+    const resetPassword = async() => {
+        const email = emailRef.current.value;
+         if(email){
+             await sendPasswordResetEmail(email);
+             toast('Sent Email')
+         }
+         else{
+             toast('please enter your email')
+         }
+    }
     return (
         <div className='container w-25 mx-auto mt-5 shadow-lg p-3 mb-5 bg-body rounded rounded-3'>
             <h2 className='text-center text-primary'>Login</h2>
             <form onSubmit={handleSubmit}>
-
+               
                 <div className="mb-3">
                     <label   className="form-label">Email address</label>
                     <input type="email" ref={emailRef} className="form-control"aria-describedby="emailHelp" required />
@@ -60,8 +81,11 @@ const LogIn = () => {
                     <p style={{marginTop: '10px', padding:'10px'}}>OR</p>
                     <div style={{border:'1px solid blue', width:'200px'}}></div>
                 </div>
+                {errorElement}
             <button onClick={handleSignInWithGoogle} className='btn btn-success w-100 mb-2'>Login with Google</button>
-            <p>New User? <Link to='/register' className='text-danger text-decoration-none' onClick={navigateRegister}>please register</Link></p>
+            <p>New User? <Link to='/register' className='text-primary text-decoration-none' onClick={navigateRegister}>please register</Link></p>
+            <p>Forget password? <button className='btn btn-link text-primary' onClick={resetPassword}>Reset Password</button></p>
+            <ToastContainer />
         </div>
     );
 };

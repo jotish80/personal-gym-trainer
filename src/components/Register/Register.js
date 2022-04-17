@@ -1,27 +1,35 @@
 import React from 'react';
 import './Register.css';
-import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
 import auth from'../../Firebase/firebase.init';
 import { Link, useNavigate } from 'react-router-dom';
+
  
  
 const Register = () => {
-    const [createUserWithEmailAndPassword,user,loading,error,] = useCreateUserWithEmailAndPassword(auth);
+    const [createUserWithEmailAndPassword,user,loading,error,] = useCreateUserWithEmailAndPassword(auth, {sendEmailVerification:true});
+    const [updateProfile, updating, updateError] = useUpdateProfile(auth);
 
     const navigate = useNavigate();
     const navigateLogin = () => {
         navigate('/login');
     }
     if(user){
-        navigate('/')
+        
+       console.log('user', user);
     }
 
-     const handleRegister = (event) =>{
+     const handleRegister = async(event) =>{
          event.preventDefault();
          const name = event.target.name.value;
          const email = event.target.email.value;
          const password = event.target.password.value;
-         createUserWithEmailAndPassword(email, password);
+         const confirmPassword = event.target.password.value;
+        await createUserWithEmailAndPassword(email, password);
+        await updateProfile({displayName: name});
+        alert('update profile');
+         navigate('/');
+       
      }
     return (
         <div className='container w-25 mx-auto mt-5 shadow-lg p-3 mb-5 bg-body rounded rounded-3'> 
@@ -39,11 +47,15 @@ const Register = () => {
                 </div>
                 <div className="mb-3">
                     <label  className="form-label">Password</label>
+                    <input type="password" name='confirmPassword'  className="form-control" id="exampleInputPassword1" required/>
+                </div>
+                <div className="mb-3">
+                    <label  className="form-label">Confirm Password</label>
                     <input type="password" name='password'  className="form-control" id="exampleInputPassword1" required/>
                 </div>
                 <button type="submit" className="btn btn-primary w-100 mb-2">Register</button>
             </form>
-            <p>Already have an account? <Link to='/login' className='text-danger text-decoration-none' onClick={navigateLogin}>please Login</Link></p>
+            <p>Already have an account? <Link to='/login' className='text-primary text-decoration-none' onClick={navigateLogin}>please Login</Link></p>
         </div>
     );
 };

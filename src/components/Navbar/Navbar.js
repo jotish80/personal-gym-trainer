@@ -5,7 +5,7 @@ import CustomLink from '../CustomLink/CustomLink';
 const Navbar = () => {
     return (
         <div>
-            <nav className="navbar navbar-expand-lg navbar-expand-sm navbar-light bg-dark sticky-top fixed-bottom container">
+            <nav className="navbar navbar-expand-lg navbar-expand-sm navbar-light bg-dark sticky-top fixed-bottom">
                 <div className="container-fluid">
                      
                     <div className="collapse navbar-collapse navbar-expand-sm navbar-toggler" id="navbarTogglerDemo01">
