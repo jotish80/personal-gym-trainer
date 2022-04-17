@@ -3,7 +3,7 @@ import './Blogs.css';
 
 const Blogs = () => {
     return (
-        <div className='container mt-5'>
+        <div className='container mt-5 mb-5'>
             <div className='blog'>
                 <h3>Difference between authentication and authorization</h3>
                 <p>The authentication is the process of showing identity. In web there is some data is only provide for the person who give his or her identity like username, password. Users are verified. In other hand authorization is the process of users are validated. Users authorize only he or she authenticated. It needs users security levels.</p>
@@ -15,7 +15,7 @@ const Blogs = () => {
             </div>
             <div className='blog'>
                 <h3>What other services does firebase provide other than authentication?</h3>
-                <p>Hosting: you can host your websites very easily. Cloud functions, Realtime database, Cloud firestore and cloud messaging.</p>
+                <p>Hosting: you can host your websites very easily. Cloud functions: cloud functions are private and secure, Realtime database: optimize for offline use and build strong user-based security, Cloud firestore: cross platform solution and cloud messaging: easily send messages across multiple platforms.</p>
             </div>
         </div>
     );

@@ -24,7 +24,7 @@
     "id": "4",
     "name": "Mark",
     "price": 1200,
-    "description":"Evaluate clients’ fitness levels and health conditions.Explain exercises in detail and suggest alternatives if needed.Monitor progress of clients’ fitness levels.",
+    "description":"Evaluate clients fitness levels and health conditions.Explain exercises in detail and suggest alternatives if needed.Monitor progress of clients fitness levels.",
     "img": "https://i.ibb.co/P1vfvp8/aaron-brogden-9y4-Ma-Tz2-Js0-unsplash-1.jpg"
   },
   {
@@ -38,7 +38,7 @@
     "id": "6",
     "name": "John",
     "price": 1500,
-    "description":"Promote the gym’s fitness packages and plans.Perform CPR and administer first aid in case of emergencies.The awesome body building you should achieve.",
+    "description":"Promote the gyms fitness packages and plans.Perform CPR and administer first aid in case of emergencies.The awesome body building you should achieve.",
     "img": "https://i.ibb.co/qRS2KF3/anastase-maragos-i-Uzge-POo-Gko-unsplash.jpg"
   }
    

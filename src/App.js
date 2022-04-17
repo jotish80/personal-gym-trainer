@@ -9,7 +9,10 @@ import Home from './components/Home/Home';
 import LogIn from './components/LogIn/LogIn';
 import NotFound from './components/NotFound/NotFound';
 import Register from './components/Register/Register';
+import RequireAuth from './components/RequireAuth/RequireAuth';
+import ServiceDetails from './components/ServiceDetails/ServiceDetails';
 import Services from './components/Services/Services';
+
 
 function App() {
   return (
@@ -19,12 +22,22 @@ function App() {
                 <Route path='/' element={<Home />}></Route>
                 <Route path='/about' element={<About />}></Route>
                 <Route path='/services' element={<Services />}></Route>
+                
+                   <Route path='/services/:serviceId' element={
+                   <RequireAuth>
+                   <ServiceDetails />
+                   </RequireAuth>
+                   }>
+              
+                   </Route>
+                
+               
                 <Route path='/login' element={<LogIn />}></Route>
                 <Route path='/register' element={<Register />}></Route>
                 <Route path='/blogs' element={<Blogs />}></Route>
                 <Route path='*' element={<NotFound />}></Route>
             </Routes>
-            <Footer />
+        <Footer />
     </div>
   );
 }

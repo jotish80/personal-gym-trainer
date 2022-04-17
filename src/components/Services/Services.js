@@ -9,8 +9,8 @@ const Services = () => {
 
 
     return (
-        <div className='row text-center'>
-            <h1 className='text-center mt-5 mb-5'>Services</h1>
+        <div id="services" className='row text-center'>
+            <h1 className='text-center mt-5 mb-5 text-primary'>Services</h1>
             {
                 services.map(service => <ServiceCard service={service} key={service.id} /> )
             }

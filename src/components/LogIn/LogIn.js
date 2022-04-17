@@ -1,11 +1,12 @@
 import React, {  useRef } from 'react';
 import './LogIn.css';
 import { useAuthState, useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../Firebase/firebase.init';
 import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+ 
 
 
 const LogIn = () => {
@@ -23,12 +24,15 @@ const LogIn = () => {
 
     const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
 
+    const location = useLocation();
+    const from = location.state?.from?.pathname || '/';
+
     const provider = new GoogleAuthProvider();
     const handleSignInWithGoogle = () => {
         signInWithPopup(auth, provider)
             .then((result => {
                 const user = result.user;
-                console.log(user);
+                navigate(from, {replace: true});
             }))
             .catch((error => {
                 console.log(error);
@@ -43,7 +47,7 @@ const LogIn = () => {
     }
 
     if (user) {
-        navigate('/');
+        navigate(from, {replace: true});
     }
 
     const navigateRegister = (event) => {
@@ -74,7 +78,7 @@ const LogIn = () => {
                     <label   className="form-label">Password</label>
                     <input type="password" ref={passRef} className="form-control" required />
                 </div>
-                <button type="submit" className="btn btn-primary w-100">Submit</button>
+                <button type="submit" className="btn btn-primary w-100">Login</button>
             </form>
                 <div className='d-flex justify-content-center align-items-center'>
                     <div style={{border: '1px solid blue', width:'200px'}}></div>

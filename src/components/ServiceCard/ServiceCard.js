@@ -1,9 +1,14 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const ServiceCard = (props) => {
 
-    const{name, price, img, description } = props.service;
+    const{id,name, price, img, description } = props.service;
+    const navigate = useNavigate();
+
+    const navigateToServiceDetail = (id) => {
+        navigate(`/services/${id}`)
+    }
 
     return (
         <div className='col-md-6 col-sm-12 col-lg-4 gx-5 mt-2'>
@@ -13,7 +18,7 @@ const ServiceCard = (props) => {
                 <h5 className="card-title">{name}</h5>
                 <p className="card-text"> {description}</p>
                 <h5>${price}</h5>
-                <Link to='/' className="btn btn-primary w-100">Cheek Out</Link>
+                 <button onClick={()=>navigateToServiceDetail(id)} className="btn btn-primary w-100">Service Details </button>
             </div>
         </div>
         </div>
