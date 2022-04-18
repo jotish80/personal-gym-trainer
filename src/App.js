@@ -1,4 +1,4 @@
- 
+
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import About from './components/About/About';
@@ -18,26 +18,22 @@ function App() {
   return (
     <div>
       <Header />
-        <Routes>
-                <Route path='/' element={<Home />}></Route>
-                <Route path='/about' element={<About />}></Route>
-                <Route path='/services' element={<Services />}></Route>
-                
-                   <Route path='/services/:serviceId' element={
-                   <RequireAuth>
-                   <ServiceDetails />
-                   </RequireAuth>
-                   }>
-              
-                   </Route>
-                
-               
-                <Route path='/login' element={<LogIn />}></Route>
-                <Route path='/register' element={<Register />}></Route>
-                <Route path='/blogs' element={<Blogs />}></Route>
-                <Route path='*' element={<NotFound />}></Route>
-            </Routes>
-        <Footer />
+      <Routes>
+        <Route path='/' element={<Home />}></Route>
+        <Route path='/about' element={<About />}></Route>
+        <Route path='/services' element={<Services />}></Route>
+        <Route path='/services/:serviceId' element={
+          <RequireAuth>
+            <ServiceDetails />
+          </RequireAuth>
+        }>
+        </Route>
+        <Route path='/login' element={<LogIn />}></Route>
+        <Route path='/register' element={<Register />}></Route>
+        <Route path='/blogs' element={<Blogs />}></Route>
+        <Route path='*' element={<NotFound />}></Route>
+      </Routes>
+      <Footer />
     </div>
   );
 }
