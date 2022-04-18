@@ -17,13 +17,13 @@
 ### `npm test`
 
 1. List of technologies I used:
-              1. React
-              2. React firbase hooks
-              3. Firbase for google authentication
-              4. React toastify
-              5. Require Auth for private route
-              6. Custom Links
-              7. Bootstrap 
+  a). React
+  b). React firbase hooks
+  c). Firbase for google authentication
+  d). React toastify
+  e). Require Auth for private route
+  f). Custom Links
+  g). Bootstrap 
 
 ### `npm run build`
 
