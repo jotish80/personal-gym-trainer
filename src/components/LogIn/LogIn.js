@@ -7,7 +7,7 @@ import { GoogleAuthProvider, sendSignInLinkToEmail, signInWithPopup } from "fire
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-
+import { BsGoogle } from 'react-icons/bs';
 
 const LogIn = () => {
 
@@ -87,7 +87,7 @@ const LogIn = () => {
                 <div style={{ border: '1px solid blue', width: '200px' }}></div>
             </div>
             {errorElement}
-            <button onClick={handleSignInWithGoogle} className='btn btn-success w-100 mb-2'>Login with Google</button>
+            <button onClick={handleSignInWithGoogle} className='btn btn-success w-100 mb-2'><BsGoogle className='me-2 mb-1' />Login with Google</button>
             <p>New User? <Link to='/register' className='text-primary text-decoration-none' onClick={navigateRegister}>please register</Link></p>
             <p>Forget password? <button className='btn btn-link text-primary' onClick={resetPassword}>Reset Password</button></p>
             <ToastContainer />

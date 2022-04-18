@@ -1,5 +1,4 @@
 import React from 'react';
-import './Register.css';
 import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
 import auth from'../../Firebase/firebase.init';
 import { Link, useNavigate } from 'react-router-dom';

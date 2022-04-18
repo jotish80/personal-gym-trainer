@@ -1,5 +1,4 @@
 import React from 'react';
-// import './ContactUs.css';
 import contact from '../../images/contact-us.jpg'
 
 const ContactUs = () => {
