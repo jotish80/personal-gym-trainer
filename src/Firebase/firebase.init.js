@@ -8,7 +8,7 @@ const firebaseConfig = {
   projectId: "personal-gym-trainer-cccb5",
   storageBucket: "personal-gym-trainer-cccb5.appspot.com",
   messagingSenderId: "600754345463",
-  appId: "1:600754345463:web:75c6f2153eb56c0fb70af2"
+  appId: "1:600754345463:web:75c6f2153eb56c0fb70af2"  
 };
 
 // Initialize Firebase

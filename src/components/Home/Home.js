@@ -1,5 +1,5 @@
 import React from 'react';
-import ContactUs from '../../ContactUs/ContactUs';
+import ContactUs from '../ContactUs/ContactUs';
 import mainImg from '../../images/total-shape-TY_Ce5d2G-k-unsplash.jpg'
 import Services from '../Services/Services';
  

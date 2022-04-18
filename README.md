@@ -1,23 +1,29 @@
-# Getting Started with Create React App
+# Personal Gym Trainer
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Live Site Link
 
-## Available Scripts
-
-In the project directory, you can run:
+[Personal-Gym-Trainer] ()
 
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+ This project is used by the following features:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+ * Home page contain navbar, banner, services, contact form & footer.
+ * Service section if you choose single service then you should register ife new other wise you can log in with google than access service.
+ * Blog route will show you 3 questions and answers.
+ * About section is for my goal information.
+ * For authentication I used Firbase.
 
 ### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. List of technologies I used:
+              1. React
+              2. React firbase hooks
+              3. Firbase for google authentication
+              4. React toastify
+              5. Require Auth for private route
+              6. Custom Links
+              7. Bootstrap 
 
 ### `npm run build`
 

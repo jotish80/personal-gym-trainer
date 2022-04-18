@@ -1,9 +1,9 @@
-import React, {  useRef } from 'react';
+import React, {  useRef, useState } from 'react';
 import './LogIn.css';
 import { useAuthState, useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../Firebase/firebase.init';
-import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
+import { GoogleAuthProvider, sendSignInLinkToEmail, signInWithPopup } from "firebase/auth";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
  
@@ -15,11 +15,13 @@ const LogIn = () => {
     const emailRef = useRef('');
     const passRef = useRef('');
     const navigate = useNavigate()
+    // const [email, setEmail] = useState('');
+    
     const [signInWithEmailAndPassword, user, loading, error,] = useSignInWithEmailAndPassword(auth);
 
     let errorElement;
     if(error){
-        errorElement = <div><p className='text-danger'>Error:{error?.message}</p></div>
+        errorElement = <div><p className='text-danger'>{error && "email or password don't match"}</p></div>
     }
 
     const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
@@ -50,6 +52,17 @@ const LogIn = () => {
         navigate(from, {replace: true});
     }
 
+    // const handleEmailChange = (event) =>{
+    //     const emailSyntax = /\S+@\S+\.\S+/;
+    //     const validEmail =emailSyntax.text(event.target.value);
+
+    //     if(validEmail){
+    //         setEmail(event.target.value)
+    //     } else{
+    //         setEmail('Invalid email')
+    //     }
+    // }
+
     const navigateRegister = (event) => {
         navigate('/register')
     }
@@ -71,8 +84,9 @@ const LogIn = () => {
                
                 <div className="mb-3">
                     <label   className="form-label">Email address</label>
-                    <input type="email" ref={emailRef} className="form-control"aria-describedby="emailHelp" required />
+                    <input type="email" ref={emailRef} className="form-control"aria-describedby="emailHelp" required  />
                     <div id="emailHelp" className="form-text"></div>
+                    
                 </div>
                 <div className="mb-3">
                     <label   className="form-label">Password</label>
