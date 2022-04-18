@@ -4,7 +4,7 @@ import contact from '../../src/images/contact-us.jpg'
 
 const ContactUs = () => {
     return (
-        <section className="container mt-5 mb-5">
+        <section className="container mb-5">
             <h1 className="mb-5 text-center fw-bold text-primary">CONTACT US</h1>
             <div className="row">
                 <div className="col-lg-6">

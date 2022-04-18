@@ -1,15 +1,17 @@
 import React from 'react';
 import ContactUs from '../../ContactUs/ContactUs';
 import mainImg from '../../images/total-shape-TY_Ce5d2G-k-unsplash.jpg'
-import ServiceDetails from '../ServiceDetails/ServiceDetails';
 import Services from '../Services/Services';
  
 
 const Home = () => {
     return (
-        <div className='container'>
+        <div>
             <img style={{width: '100%' }} src={mainImg} alt="" />
-            <Services />
+            <div className='container'>
+                <Services />
+            </div>
+            
             <ContactUs />
         </div>
     );
