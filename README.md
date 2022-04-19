@@ -2,7 +2,7 @@
 
 ## Live Site Link
 
-[Personal-Gym-Trainer] ()
+[Personal-Gym-Trainer] (https://personal-gym-trainer-cccb5.web.app/)
 
 ### `npm start`
 
